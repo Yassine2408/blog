@@ -1,7 +1,24 @@
-
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import { Button } from "@/components/ui/button";
+import { Card } from "@/components/ui/card";
+import { Share2, Bookmark, Clock } from "lucide-react";
 import { useParams } from "react-router-dom";
+
+interface Article {
+  id: number;
+  title: string;
+  content: string;
+  author: {
+    name: string;
+    bio: string;
+    image: string;
+  };
+  date: string;
+  readTime: string;
+  category: string;
+  tags: string[];
+}
 
 // Verified real Arab financial & business figures
 const articles = [
@@ -110,7 +127,7 @@ function getRelatedArticles(currIdArr) {
   return articles.filter((a) => currIdArr.includes(a.id));
 }
 
-export default function Article() {
+const Article = () => {
   const { id } = useParams();
   const article = findArticleById(id);
 
@@ -128,55 +145,104 @@ export default function Article() {
   return (
     <div className="min-h-screen bg-white font-cairo">
       <Navbar />
-      <main className="container mx-auto px-4 md:px-6 py-12 max-w-3xl">
-        {/* Cover Image */}
-        <div className="mb-8 rounded-xl overflow-hidden shadow-sm">
-          <img src={article.imageUrl} alt={article.title} className="w-full h-72 object-cover" />
-        </div>
-        <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">{article.title}</h1>
-        <div className="mb-6 text-sm text-gray-500 flex items-center gap-2">
-          <span>بواسطة: {article.author.name}</span>
-          <span>•</span>
-          <span>{article.date}</span>
-        </div>
-        {/* Article Content */}
-        <div className="prose prose-lg max-w-2xl mx-auto text-gray-800 mb-10" dir="rtl" style={{whiteSpace: 'pre-line'}}>
-          {article.content}
-        </div>
-        {/* About Author */}
-        <div className="flex items-center bg-teal-50 rounded-lg p-6 mb-10">
-          <img src={article.author.avatar} alt={article.author.name} className="w-16 h-16 rounded-full object-cover ml-4 border-2 border-teal-200" />
-          <div>
-            <div className="font-bold">{article.author.name}</div>
-            <div className="text-sm text-gray-600">{article.author.bio}</div>
-          </div>
-        </div>
-        {/* Related Articles */}
-        {relatedArticles.length > 0 && (
-          <div className="mb-12">
-            <h2 className="text-xl font-bold mb-4">مقالات ذات صلة</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
-              {relatedArticles.map(ra => (
-                <a
-                  key={ra.id}
-                  href={`/article/${ra.id}`}
-                  className="block group bg-teal-50 hover:bg-teal-100 rounded-lg p-4 transition"
-                >
-                  <div className="flex gap-4 items-center">
-                    <img src={ra.imageUrl} alt={ra.title} className="w-20 h-16 rounded object-cover border border-teal-100" />
-                    <div>
-                      <div className="font-bold text-teal-700 group-hover:underline">{ra.title}</div>
-                      <div className="text-xs text-gray-600">{ra.date}</div>
-                    </div>
-                  </div>
-                </a>
-              ))}
+      <main>
+        {/* Article Header */}
+        <div className="bg-teal-600 py-16">
+          <div className="container mx-auto px-4 md:px-6">
+            <div className="max-w-3xl mx-auto">
+              <span className="inline-block bg-teal-100 text-teal-800 px-3 py-1 rounded-full text-sm font-medium mb-4">
+                {article.category}
+              </span>
+              <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
+                {article.title}
+              </h1>
+              <div className="flex items-center text-teal-100 space-x-4">
+                <div className="flex items-center">
+                  <Clock className="w-4 h-4 mr-1" />
+                  <span>{article.readTime}</span>
+                </div>
+                <span>•</span>
+                <span>{article.date}</span>
+              </div>
             </div>
           </div>
-        )}
-        <a href="/articles" className="text-teal-600 font-medium underline block mt-6 text-center">← العودة لكل المقالات</a>
+        </div>
+
+        {/* Article Content */}
+        <section className="py-12">
+          <div className="container mx-auto px-4 md:px-6">
+            <div className="max-w-3xl mx-auto">
+              {/* Author Info */}
+              <div className="flex items-center mb-8 p-4 bg-gray-50 rounded-lg">
+                <img 
+                  src={article.author.avatar} 
+                  alt={article.author.name}
+                  className="w-16 h-16 rounded-full object-cover mr-4"
+                />
+                <div>
+                  <h3 className="font-bold text-gray-900">{article.author.name}</h3>
+                  <p className="text-sm text-gray-600">{article.author.bio}</p>
+                </div>
+              </div>
+
+              {/* Article Body */}
+              <div 
+                className="prose prose-lg max-w-none"
+                dangerouslySetInnerHTML={{ __html: article.content }}
+              />
+
+              {/* Tags */}
+              <div className="mt-12">
+                <h3 className="text-lg font-bold mb-4">الوسوم</h3>
+                <div className="flex flex-wrap gap-2">
+                  {article.tags.map((tag, index) => (
+                    <span 
+                      key={index}
+                      className="bg-gray-100 text-gray-800 px-3 py-1 rounded-full text-sm"
+                    >
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+              </div>
+
+              {/* Share & Save */}
+              <div className="mt-12 flex justify-between items-center border-t pt-6">
+                <div className="flex space-x-4">
+                  <Button variant="outline" className="flex items-center">
+                    <Share2 className="w-4 h-4 mr-2" />
+                    مشاركة
+                  </Button>
+                  <Button variant="outline" className="flex items-center">
+                    <Bookmark className="w-4 h-4 mr-2" />
+                    حفظ
+                  </Button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Related Articles */}
+        <section className="py-12 bg-gray-50">
+          <div className="container mx-auto px-4 md:px-6">
+            <div className="max-w-3xl mx-auto">
+              <h2 className="text-2xl font-bold mb-8">مقالات ذات صلة</h2>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                {relatedArticles.map(ra => (
+                  <Card key={ra.id} className="p-4">
+                    <h3 className="font-bold mb-2">{ra.title}</h3>
+                    <p className="text-sm text-gray-600">{ra.date}</p>
+                  </Card>
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
       </main>
       <Footer />
     </div>
   );
-}
+};
+
+export default Article;

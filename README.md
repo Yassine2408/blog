@@ -1,73 +1,60 @@
-# Welcome to your Lovable project
+# مال-الثروة | موقع عربي للمال والاستثمار
 
-## Project info
+موقع تعليمي عربي متخصص في مجال المال والاستثمار، يقدم محتوى موثوق ومدقق من قبل خبراء ماليين معتمدين.
 
-**URL**: https://lovable.dev/projects/4d7ef261-0c26-4e46-8948-2c8231c35cf2
+## 🎯 الهدف
 
-## How can I edit this code?
+توفير مصدر موثوق للمعلومات المالية باللغة العربية، مع التركيز على:
+- التعليم المالي
+- التوعية الاستثمارية
+- إدارة المال الشخصي
+- التخطيط المالي
 
-There are several ways of editing your application.
+## 📋 المحتوى
 
-**Use Lovable**
+يقدم الموقع محتوى متنوع يشمل:
+- مقالات تعليمية
+- نصائح مالية عملية
+- تحليلات استثمارية
+- أدوات مالية مفيدة
+- دراسات حالة واقعية
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/4d7ef261-0c26-4e46-8948-2c8231c35cf2) and start prompting.
+## ⚠️ تنويه هام
 
-Changes made via Lovable will be committed automatically to this repo.
+- هذا الموقع يقدم معلومات تعليمية فقط
+- لا يعتبر نصيحة استثمارية أو مالية مهنية
+- يجب استشارة مستشار مالي مؤهل قبل اتخاذ أي قرارات استثمارية
+- جميع المحتوى يتم مراجعته من قبل خبراء ماليين معتمدين
 
-**Use your preferred IDE**
+## 🛠️ التقنيات المستخدمة
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
-
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
-
-**Edit a file directly in GitHub**
-
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
-
-**Use GitHub Codespaces**
-
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
-
-This project is built with:
-
-- Vite
-- TypeScript
 - React
-- shadcn-ui
+- TypeScript
 - Tailwind CSS
+- Vite
 
-## How can I deploy this project?
+## 📝 المساهمة
 
-Simply open [Lovable](https://lovable.dev/projects/4d7ef261-0c26-4e46-8948-2c8231c35cf2) and click on Share -> Publish.
+نرحب بالمساهمات من:
+- خبراء ماليين معتمدين
+- كتاب محتوى مالي
+- مطورين
+- مصممين
 
-## Can I connect a custom domain to my Lovable project?
+## 📜 الترخيص
 
-Yes, you can!
+هذا المشروع مرخص تحت رخصة MIT.
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+## 📞 التواصل
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+للتواصل مع فريق الموقع:
+- البريد الإلكتروني: info@mal-thawra.com
+- تويتر: @mal_thawra
+
+## 🔒 الأمان والخصوصية
+
+نحن نحرص على:
+- حماية بيانات المستخدمين
+- استخدام تشفير SSL
+- عدم مشاركة البيانات مع أطراف ثالثة
+- الالتزام بمعايير الأمان العالمية

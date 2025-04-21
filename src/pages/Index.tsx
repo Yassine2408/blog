@@ -5,6 +5,7 @@ import CategoriesSection from "@/components/CategoriesSection";
 import FinancialTips from "@/components/FinancialTips";
 import NewsletterSection from "@/components/NewsletterSection";
 import Footer from "@/components/Footer";
+import Disclaimer from "@/components/Disclaimer";
 
 const Index = () => {
   return (
@@ -12,6 +13,7 @@ const Index = () => {
       <Navbar />
       <main>
         <HeroSection />
+        <Disclaimer />
         <FeaturedArticles />
         <CategoriesSection />
         <FinancialTips />

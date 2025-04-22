@@ -1,11 +1,11 @@
-
 import { Link } from "react-router-dom";
 import { 
   Facebook, 
   Twitter, 
   Instagram, 
   Youtube, 
-  Mail
+  Mail,
+  Linkedin
 } from "lucide-react";
 
 export default function Footer() {
@@ -38,6 +38,9 @@ export default function Footer() {
               <a href="#" className="text-gray-400 hover:text-teal-400 transition-colors">
                 <Youtube size={20} />
               </a>
+              <a href="#" className="text-gray-400 hover:text-teal-400 transition-colors">
+                <Linkedin size={20} />
+              </a>
             </div>
           </div>
 
@@ -68,6 +71,16 @@ export default function Footer() {
               <li>
                 <Link to="/about" className="text-gray-400 hover:text-teal-400 transition-colors">
                   عن الموقع
+                </Link>
+              </li>
+              <li>
+                <Link to="/privacy-policy" className="text-gray-400 hover:text-teal-400 transition-colors">
+                  سياسة الخصوصية
+                </Link>
+              </li>
+              <li>
+                <Link to="/terms-conditions" className="text-gray-400 hover:text-teal-400 transition-colors">
+                  شروط الاستخدام
                 </Link>
               </li>
             </ul>

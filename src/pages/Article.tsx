@@ -38,7 +38,7 @@ const articles = [
     author: {
       name: "محمد السويد",
       bio: "خبير تعليم الثقافة المالية ومؤسس مبادرة الوعي المالي في السعودية",
-      avatar: "https://example.com/avatar1.jpg"
+      avatar: ""
     },
     date: "٢٠ أبريل ٢٠٢٥",
     readTime: "٥ دقائق",
@@ -58,7 +58,7 @@ const articles = [
     author: {
       name: "أحمد المطوع",
       bio: "محلل مالي كويتي، حاصل على CFA ومدير عدة صناديق استثمارية",
-      avatar: "https://example.com/avatar2.jpg"
+      avatar: ""
     },
     date: "١٨ أبريل ٢٠٢٥",
     readTime: "٧ دقائق",
@@ -79,7 +79,7 @@ const articles = [
     author: {
       name: "عبدالله العسكر",
       bio: "خبير في التقنية المالية ومراجع تطبيقات مالية",
-      avatar: "https://example.com/avatar3.jpg"
+      avatar: ""
     },
     date: "١٥ أبريل ٢٠٢٥",
     readTime: "٦ دقائق",
@@ -99,7 +99,7 @@ const articles = [
     author: {
       name: "فهد الحويماني",
       bio: "خبير في العملات الرقمية والتقنيات المالية الحديثة",
-      avatar: "https://example.com/avatar4.jpg"
+      avatar: ""
     },
     date: "١٢ أبريل ٢٠٢٥",
     readTime: "٨ دقائق",
@@ -171,11 +171,13 @@ const Article = () => {
             <div className="max-w-3xl mx-auto">
               {/* Author Info */}
               <div className="flex items-center mb-8 p-4 bg-gray-50 rounded-lg">
-                <img 
-                  src={article.author.avatar} 
-                  alt={article.author.name}
-                  className="w-16 h-16 rounded-full object-cover mr-4"
-                />
+                {article.author.avatar && (
+                  <img 
+                    src={article.author.avatar} 
+                    alt={article.author.name}
+                    className="w-16 h-16 rounded-full object-cover mr-4"
+                  />
+                )}
                 <div>
                   <h3 className="font-bold text-gray-900">{article.author.name}</h3>
                   <p className="text-sm text-gray-600">{article.author.bio}</p>

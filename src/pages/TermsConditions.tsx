@@ -8,7 +8,7 @@ const TermsConditions = () => {
       <main className="container mx-auto px-4 md:px-6 py-12">
         <div className="max-w-3xl mx-auto">
           <h1 className="text-3xl font-bold mb-6">شروط وأحكام استخدام مال-الثروة</h1>
-          <p className="mb-4">تاريخ السريان: [أدخل تاريخ اليوم]</p>
+          <p className="mb-4">تاريخ السريان: 22/04/2025</p>
 
           <p className="mb-4">
             مرحبًا بك في مال-الثروة ("الموقع"). باستخدامك لهذا الموقع، فإنك توافق على الالتزام بهذه الشروط والأحكام ("الشروط"). إذا كنت لا توافق على أي جزء من هذه الشروط، فيجب عليك عدم استخدام الموقع.

@@ -8,7 +8,7 @@ const PrivacyPolicy = () => {
       <main className="container mx-auto px-4 md:px-6 py-12">
         <div className="max-w-3xl mx-auto">
           <h1 className="text-3xl font-bold mb-6">سياسة الخصوصية لـ مال-الثروة</h1>
-          <p className="mb-4">تاريخ السريان: [أدخل تاريخ اليوم]</p>
+          <p className="mb-4">تاريخ السريان: 22/04/2025</p>
 
           <p className="mb-4">
             نحن في مال-الثروة ("الموقع"، "نحن"، "لنا") نقدر خصوصيتك ونلتزم بحماية معلوماتك الشخصية. توضح سياسة الخصوصية هذه كيف نجمع ونستخدم ونكشف عن معلوماتك عند زيارتك لموقعنا الإلكتروني mal-thawra.netlify.app.

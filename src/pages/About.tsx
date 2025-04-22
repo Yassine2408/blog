@@ -1,4 +1,3 @@
-
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
@@ -122,63 +121,67 @@ const About = () => {
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {/* Profile 1 */}
               <div className="text-center">
                 <div className="mb-4 aspect-square max-w-[200px] mx-auto overflow-hidden rounded-full">
                   <img 
-                    src="https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=1974&auto=format&fit=crop" 
-                    alt="أحمد الشمري" 
+                    src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=1887&auto=format&fit=crop" 
+                    alt="خالد العمري" 
                     className="w-full h-full object-cover"
                   />
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-1">أحمد الشمري</h3>
-                <p className="text-teal-600 mb-3">المؤسس والرئيس التنفيذي</p>
+                <h3 className="text-xl font-bold text-gray-900 mb-1">خالد العمري</h3>
+                <p className="text-teal-600 mb-3">محلل استثمار أول</p>
                 <p className="text-gray-600 text-sm">
-                  خبير مالي واستثماري مع خبرة ١٥ عاماً في الأسواق المالية والاستثمارات المتنوعة.
+                  متخصص في تحليل الأسواق المالية وتقييم فرص الاستثمار في الأسهم والصناديق المتداولة.
                 </p>
               </div>
 
+              {/* Profile 2 */}
               <div className="text-center">
                 <div className="mb-4 aspect-square max-w-[200px] mx-auto overflow-hidden rounded-full">
                   <img 
-                    src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=1976&auto=format&fit=crop" 
-                    alt="نورا العلي" 
+                    src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?q=80&w=1780&auto=format&fit=crop" 
+                    alt="فاطمة بناني" 
                     className="w-full h-full object-cover"
                   />
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-1">نورا العلي</h3>
-                <p className="text-teal-600 mb-3">رئيسة قسم المحتوى</p>
+                <h3 className="text-xl font-bold text-gray-900 mb-1">فاطمة بناني</h3>
+                <p className="text-teal-600 mb-3">محررة محتوى مالي</p>
                 <p className="text-gray-600 text-sm">
-                  متخصصة في التخطيط المالي الشخصي وإدارة الثروات مع شغف بتبسيط المفاهيم المالية المعقدة.
+                  خبيرة في تبسيط المفاهيم المالية المعقدة ووضع خطط الادخار والاستثمار الشخصية.
                 </p>
               </div>
 
+              {/* Profile 3 */}
               <div className="text-center">
                 <div className="mb-4 aspect-square max-w-[200px] mx-auto overflow-hidden rounded-full">
                   <img 
-                    src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?q=80&w=1974&auto=format&fit=crop" 
-                    alt="سامر القحطاني" 
+                    src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=1887&auto=format&fit=crop" 
+                    alt="سامي الحاج" 
                     className="w-full h-full object-cover"
                   />
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-1">سامر القحطاني</h3>
-                <p className="text-teal-600 mb-3">خبير التقنية المالية</p>
+                <h3 className="text-xl font-bold text-gray-900 mb-1">سامي الحاج</h3>
+                <p className="text-teal-600 mb-3">باحث في التقنية المالية</p>
                 <p className="text-gray-600 text-sm">
-                  متخصص في التقنية المالية والعملات الرقمية مع خبرة في تقييم التطبيقات المالية وتوجهات السوق الرقمية.
+                  يراقب أحدث اتجاهات التكنولوجيا المالية وتطبيقاتها، مع اهتمام خاص بالعملات الرقمية وتقنيات البلوك تشين.
                 </p>
               </div>
 
+              {/* Profile 4 */}
               <div className="text-center">
                 <div className="mb-4 aspect-square max-w-[200px] mx-auto overflow-hidden rounded-full">
                   <img 
                     src="https://images.unsplash.com/photo-1580489944761-15a19d654956?q=80&w=1961&auto=format&fit=crop" 
-                    alt="هدى المنصور" 
+                    alt="ليلى مراد" 
                     className="w-full h-full object-cover"
                   />
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-1">هدى المنصور</h3>
-                <p className="text-teal-600 mb-3">مستشارة الاستثمار</p>
+                <h3 className="text-xl font-bold text-gray-900 mb-1">ليلى مراد</h3>
+                <p className="text-teal-600 mb-3">استشارية التخطيط المالي</p>
                 <p className="text-gray-600 text-sm">
-                  مستشارة استثمارية معتمدة مع خبرة واسعة في أسواق الأسهم وإدارة المحافظ الاستثمارية.
+                  تساعد الأفراد على تحديد أهدافهم المالية ووضع استراتيجيات عملية لإدارة الميزانية والديون وتحقيق الاستقرار المالي.
                 </p>
               </div>
             </div>
